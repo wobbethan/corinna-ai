@@ -27,7 +27,9 @@ const MenuItem = ({ size, path, icon, label, current, onSignOut }: Props) => {
           )}
           href={path ? `/${path}` : "#"}
         >
-          {icon} {label}
+          <div className="flex items-center justify-center gap-2">
+            {icon} {label}
+          </div>
         </Link>
       );
     case "min":
@@ -40,11 +42,11 @@ const MenuItem = ({ size, path, icon, label, current, onSignOut }: Props) => {
               : current == path
               ? "bg-white font-bold text-black"
               : "text-gray-500",
-            "rounded-lg py-2 my-1"
+            "rounded-lg py-2 my-1 px-3"
           )}
           href={path ? `/${path}` : "#"}
         >
-          {icon}
+          <div className="flex items-center justify-center">{icon}</div>
         </Link>
       );
     default:

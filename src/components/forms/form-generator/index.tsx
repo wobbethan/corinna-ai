@@ -92,6 +92,7 @@ const FormGenerator = ({
             {...register(name)}
             rows={lines}
             defaultValue={defaultValue}
+            className="focus-visible:ring-transparent"
           />
           <ErrorMessage
             errors={errors}
