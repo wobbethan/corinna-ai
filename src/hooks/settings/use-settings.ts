@@ -102,7 +102,6 @@ export const useSettings = (id: string) => {
       }
     }
     reset();
-    router.refresh();
     setLoading(false);
   });
   const onDeleteDomain = async () => {
